@@ -26,6 +26,10 @@
     gap: 20px;
     margin-top: 40px;
 }
+.products-grid:has(.product:nth-child(6)) {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
 
 .product {
     padding: 1rem;
@@ -51,7 +55,7 @@
 .product-image {
     width: 100%;
     justify-self: center;
-    height: 150px;
+    aspect-ratio: 1.5;
     object-fit: fit;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;

@@ -3,6 +3,8 @@ import hmi from '../../assets/hmi.png'
 import servo from '../../assets/servo.png'
 import plc from '../../assets/plc.png'
 import v_box from '../../assets/v-box.png'
+import vfid from '../../assets/vfid.png'
+import electrical_control_panel from '../../assets/electrical-control-panel.png'
 
 
 export default function Products() {
@@ -29,6 +31,16 @@ export default function Products() {
           <a className="product" src="#">
             <img src={v_box} alt="Product IIoT V-BOX" className="product-image"/>
             <h3 className="product-title">IIoT V-BOX</h3>
+            <p className="product-description">V-BOX is the basic hardware of BAGMANE IIoT platform</p>
+          </a>
+          <a className="product" src="#">
+            <img src={vfid} alt="Product PLC" className="product-image"/>
+            <h3 className="product-title">VFID</h3>
+            <p className="product-description">BAGMANE PLC has the features of high precision, fast speed, strong stability etc.</p>
+          </a>
+          <a className="product" src="#">
+            <img src={electrical_control_panel} alt="Product IIoT V-BOX" className="product-image"/>
+            <h3 className="product-title">Electrical Control Panel</h3>
             <p className="product-description">V-BOX is the basic hardware of BAGMANE IIoT platform</p>
           </a>
           {/* Add more products as needed */}

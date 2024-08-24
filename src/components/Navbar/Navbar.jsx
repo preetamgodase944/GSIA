@@ -15,9 +15,9 @@ export default function Navbar() {
       <h1>BAGMANE</h1>
       <ul className={ showMobileMenu ? 'show-menu' : null }>
         <li><a href="#products">PRODUCTS</a></li>
-        <li><a href="#solutions">SOLUTIONS</a></li>
-        <li><a href="#products">INDUSTRIAL IoT</a></li>
-        <li><a href="#footer">SUPPORT</a></li>
+        {/* <li><a href="#solutions">SOLUTIONS</a></li> */}
+        {/* <li><a href="#products">INDUSTRIAL IoT</a></li> */}
+        {/* <li><a href="#footer">SUPPORT</a></li> */}
         <li><a href="#contact-us">CONTACT US</a></li>
         <li><a href="#contact-us">ABOUT US</a></li>
       </ul>

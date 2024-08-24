@@ -7,22 +7,23 @@ const Footer = () => {
           <div className='footer-contents'>
             <div className='footer-content'>
                 <h2 class="footer-title">BAGMANE</h2>
-                <ul class="footer-list">
+                {/* <ul class="footer-list">
                     <li>Email</li>
                     <li>Service-Helpline</li>
                     <li>Technical Support</li>
                     <li>Address</li>
-                </ul>
+                </ul> */}
             </div>
 
-            <div className='footer-content'>
+            {/* <div className='footer-content'>
               <h2>About</h2>
               <ul class="footer-list">
                     <li>About Bagmane</li>
                     <li>Distributor Recruitment</li>
                 </ul>
-            </div>
+            </div> */}
 
+            <div className='footer-conatainer'>
             <div className='footer-content'>
               <h2>PRODUCTS</h2>
               <ul class="footer-list">
@@ -30,18 +31,20 @@ const Footer = () => {
                 <li>PLC</li>
                 <li>V-BOX</li>
                 <li>SERVO</li>
+                <li>VFD</li>
+                <li>ELECTRICAL CONTROL PANEL</li>
               </ul>
             </div>
 
-            <div className='footer-content'>
+            {/* <div className='footer-content'>
               <h2>SOLUTIONS</h2>
               <ul class="footer-list">
                 <li>IIoT</li>
                 <li>MACHINERY</li>
               </ul>
-            </div>
+            </div> */}
 
-            <div className='footer-content'>
+            {/* <div className='footer-content'>
               <h2>INDUSTRIAL IoT</h2>
               <ul class="footer-list">
                 <li>V-NET</li>
@@ -50,20 +53,20 @@ const Footer = () => {
                 <li>Solution</li>
                 <li>V-NET Cloud Demo</li>
               </ul>
-            </div>
+            </div> */}
 
             <div className='footer-content'>
-              <h2>SUPPORT</h2>
+              <h2>ADDRESS</h2>
               <ul class="footer-list">
-                <li>SUPPORT</li>
-                <li>Download</li>
-                <li>After-sales Service</li>
-                <li>APP</li>
+                <li>Rajrajeshwari Nagar,</li>
+                <li>Bangalore</li>
+                <li>581325</li>
               </ul>
             </div>
           </div>
-          <hr/>
-          <div className='social-icons'>
+          </div>
+          {/* <hr/> */}
+          {/* <div className='social-icons'>
             <ul>
                 <li>
                     <a href="https://web.whatsapp.com" target='#_blank'>
@@ -94,7 +97,7 @@ const Footer = () => {
                     </a>
                 </li>
             </ul>
-          </div>
+          </div> */}
           <hr/>
           <p className='footer-copyright'>&copy; 2024 BAGMANE ALL RIGHTS RESERVED</p>
         </div>  
