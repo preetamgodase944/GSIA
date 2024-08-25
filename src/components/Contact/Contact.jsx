@@ -45,7 +45,6 @@ export default function Contact() {
             <ul>
             <li><img src={mail_icon} alt='mail-icon'/>Contact@mail.com</li>
             <li><img src={phone_icon} alt='phone-icon'/>+91 123-456-7890</li>
-            <li><img src={location_icon} alt='location-icon'/>India <br/> Bengaluru 1234, Karnataka</li>
             </ul>
         </div>
         <div className='contact-col col-form'>
