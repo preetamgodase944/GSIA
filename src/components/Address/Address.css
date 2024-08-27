@@ -1,0 +1,116 @@
+.address-container {
+    background-image: url(../../assets/solutionbg.jpg);
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.address-text {
+    background-image: linear-gradient(to bottom, #f7f7f7, #9abcbe);
+    padding: 20px;
+    margin: 20px;
+    min-width: 300px;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.address-text:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to bottom, #87CEEB, var(--button-color));
+}
+
+.address-text h3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.address-text p {
+    text-indent: 2%;
+    font-size: 20px;
+}
+
+
+.address-map {
+    height: 25vh;
+    width: 25vw;
+}
+
+.view-all-solutions {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.view-all-btn {
+    background-color: var(--button-color); /* Primary color */
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.view-all-btn:hover {
+    background-color: var(--accent-color);
+}
+
+
+@media (max-width: 600px) {
+    .address-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20% 0;
+        gap: 40px;
+    }
+    .address-text {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 300px) {
+    .address-text h2 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    
+    .address-text p {
+        text-indent: 2%;
+        font-size: 12px;
+    }
+
+    .view-all-solutions {
+        margin-top: 10px;
+    }
+    
+    .view-all-solutions .view-all-btn {
+        background-color: var(--button-color); /* Primary color */
+        color: var(--text-color-light);
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: background-color 0.3s ease-in-out;
+        text-decoration: none;
+    }
+    
+}

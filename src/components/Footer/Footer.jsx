@@ -6,8 +6,8 @@ const Footer = () => {
         <div className='footer' id='footer'>
           <div className='footer-contents'>
             <div className='footer-content'>
-                <h2 class="footer-title">BAGMANE</h2>
-                {/* <ul class="footer-list">
+                <h2 className="footer-title">BAGMANE</h2>
+                {/* <ul className="footer-list">
                     <li>Email</li>
                     <li>Service-Helpline</li>
                     <li>Technical Support</li>
@@ -26,7 +26,7 @@ const Footer = () => {
             <div className='footer-conatainer'>
             <div className='footer-content'>
               <h2>PRODUCTS</h2>
-              <ul class="footer-list">
+              <ul className="footer-list">
                 <li>HMI</li>
                 <li>PLC</li>
                 <li>V-BOX</li>
@@ -38,7 +38,7 @@ const Footer = () => {
 
             {/* <div className='footer-content'>
               <h2>SOLUTIONS</h2>
-              <ul class="footer-list">
+              <ul className="footer-list">
                 <li>IIoT</li>
                 <li>MACHINERY</li>
               </ul>
@@ -46,7 +46,7 @@ const Footer = () => {
 
             {/* <div className='footer-content'>
               <h2>INDUSTRIAL IoT</h2>
-              <ul class="footer-list">
+              <ul className="footer-list">
                 <li>V-NET</li>
                 <li>V-BOX IIOT HMI</li>
                 <li>APP</li>
@@ -57,7 +57,7 @@ const Footer = () => {
 
             <div className='footer-content'>
               <h2>ADDRESS</h2>
-              <ul class="footer-list">
+              <ul className="footer-list">
                 <li>Rajrajeshwari Nagar,</li>
                 <li>Bangalore</li>
                 <li>581325</li>
@@ -99,7 +99,7 @@ const Footer = () => {
             </ul>
           </div> */}
           <hr/>
-          <p className='footer-copyright'>&copy; 2024 BAGMANE ALL RIGHTS RESERVED</p>
+          <p className='footer-copyright'>&copy; 2024 BAGMAN ALL RIGHTS RESERVED</p>
         </div>  
   )
 }

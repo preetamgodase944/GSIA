@@ -32,7 +32,6 @@ export default function Hero() {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       slideForward();
-      console.log('from slider')
     }, 3000);
     
     return () => clearInterval(slideInterval)
