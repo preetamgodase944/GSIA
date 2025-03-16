@@ -51,8 +51,6 @@ const Footer = () => {
                     <ul className="footer-list">
                         <li>Email: reach.gsia@gmail.com</li>
                         <li>Phone: +91-7349443674</li>
-                        <li>Service Helpline</li>
-                        <li>Technical Support</li>
                     </ul>
                 </div>
 
