@@ -59,9 +59,10 @@ const Footer = () => {
                 <div className='footer-content'>
                     <h2>Address</h2>
                     <ul className="footer-list">
-                        <li>Rajarajeshwari Nagar</li>
-                        <li>Bangalore, India</li>
-                        <li>581325</li>
+                        <li>No32 Ground Floor near MPM park,</li>
+                        <li>MPM Layout, Mallathhalli</li>
+                        <li>Bengaluru, India</li>
+                        <li>560056</li>
                     </ul>
                 </div>
             </div>

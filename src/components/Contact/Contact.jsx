@@ -44,7 +44,7 @@ export default function Contact() {
             <p>Feel free to reach out through contact form or find our contact information below.</p>
             <ul>
             <li><img src={mail_icon} alt='mail-icon'/>Contact@mail.com</li>
-            <li><img src={phone_icon} alt='phone-icon'/>+91 123-456-7890</li>
+            <li><img src={phone_icon} alt='phone-icon'/>+91 7349443674</li>
             </ul>
         </div>
         <div className='contact-col col-form'>
