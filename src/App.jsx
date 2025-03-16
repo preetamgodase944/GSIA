@@ -1,19 +1,22 @@
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import Products from "./components/Products/Products";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
-import Products from "./components/Products/Products";
-import Solutions from "./components/Solutions/Solutions";
+import "./App.css";
+import Training from "./components/Training/Training";
 
 export default function App() {
   return (
-    <>
+    <div className="app">
       <Navbar />
-      <Hero />
-      <Products />
-      <Solutions />
-      <Contact />
+      <main className="main-content">
+        <Hero />
+        <Products />
+        <Training />
+        <Contact />
+      </main>
       <Footer />
-    </>
-  )
+    </div>
+  );
 }

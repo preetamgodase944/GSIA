@@ -1,27 +1,55 @@
-import './Navbar.css'
-import menu_icon from '../../assets/menu-icon.svg'
-import close_icon from '../../assets/close-icon.svg'
-import { useState } from 'react'
-export default function Navbar() {
-  
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+import { useState, useEffect } from 'react';
+import Logo from '../Logo';
+import './Navbar.css';
+import menu_icon from '../../assets/menu-icon.svg';
+import close_icon from '../../assets/close-icon.svg';
 
-  function setRightPos() {
-    showMobileMenu ?setShowMobileMenu(false) :setShowMobileMenu(true)
+export default function Navbar() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  function toggleMobileMenu() {
+    setShowMobileMenu(prevState => !prevState);
   }
   
   return (
-    <nav className='container'>
-      <h1>BAGMANE</h1>
-      <ul className={ showMobileMenu ? 'show-menu' : null }>
-        <li><a href="#products">PRODUCTS</a></li>
-        {/* <li><a href="#solutions">SOLUTIONS</a></li> */}
-        {/* <li><a href="#products">INDUSTRIAL IoT</a></li> */}
-        {/* <li><a href="#footer">SUPPORT</a></li> */}
-        <li><a href="#contact-us">CONTACT US</a></li>
-        <li><a href="#contact-us">ABOUT US</a></li>
-      </ul>
-      <img onClick={setRightPos} src={showMobileMenu ? close_icon : menu_icon} alt='menu-icon' className='menu-icon'/>
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+      <div className="navbar-container">
+        <Logo />
+        
+        <ul className={`navbar-links ${showMobileMenu ? 'show-menu' : ''}`}>
+          <li className="navbar-item"><a href="#products">Products</a></li>
+          <li className="navbar-item"><a href="#training">Training</a></li>
+          <li className="navbar-item"><a href="#contact-us">Contact Us</a></li>
+          <li className="navbar-item"><a href="#about-us">About Us</a></li>
+        </ul>
+        
+        <button 
+          className="navbar-toggle" 
+          onClick={toggleMobileMenu}
+          aria-label={showMobileMenu ? 'Close menu' : 'Open menu'}
+        >
+          <img 
+            src={showMobileMenu ? close_icon : menu_icon} 
+            alt={showMobileMenu ? 'Close menu' : 'Open menu'} 
+            className="menu-icon"
+          />
+        </button>
+      </div>
     </nav>
-  )
+  );
 }
