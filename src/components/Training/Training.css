@@ -8,7 +8,7 @@
     background-image: url(../../assets/training-bg.jpg);
     background-size: cover;
     background-position: center;
-    color: #ffffff; /* Ensuring text stands out on background */
+    color: #ffffff;
     text-align: center;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .training-card {
-    background: rgba(255, 255, 255, 0.9); /* Slight transparency for a modern look */
+    background: rgba(255, 255, 255, 0.9);
     padding: 30px;
     margin: 20px;
     width: 40%;
@@ -39,6 +39,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: start;
+    color: var(--text-color);
 }
 
 .training-card:hover {
@@ -48,45 +49,9 @@
     color: #ffffff;
 }
 
-.training-card h3 {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--text-color);
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.training-card p {
-    font-size: 16px;
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.industries-list {
-    padding-left: 20px;
-}
-
-.industries-list li {
-    list-style: none;
-    font-size: 16px;
-    color: var(--text-color);
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 20px;
-}
-
-.industries-list li::before {
-    content: "✓";
-    color: var(--button-color);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
 .view-all-training {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .view-all-btn {
@@ -108,10 +73,64 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Media Query for Mobile Responsiveness --- */
+/* Expandable Training Details */
+.training-details {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.training-details h3 {
+    font-size: 24px;
+    color: var(--button-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.training-module {
+    margin-bottom: 20px;
+}
+
+.training-module h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.training-module ul {
+    padding-left: 20px;
+}
+
+.training-module ul li {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.training-module ul li::before {
+    content: "✓";
+    color: var(--button-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 900px) {
     .training-card {
         width: 80%;
         margin: auto;
+    }
+
+    .training-details {
+        width: 90%;
     }
 }
