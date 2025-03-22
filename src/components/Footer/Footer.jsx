@@ -66,15 +66,15 @@ const Footer = () => {
             </div>
 
             <div className='social-icons'>
-                <a href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+917349443674" target="_blank" rel="noopener noreferrer">
                     <img src={whatsappLogo} alt="WhatsApp" />
                 </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                {/* <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                     <img src={facebookLogo} alt="Facebook" />
                 </a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                     <img src={linkedinLogo} alt="LinkedIn" />
-                </a>
+                </a> */}
             </div>
 
             <hr />
