@@ -8,6 +8,7 @@ import hmi from './../assets/hmi.png';
 import inverter from './../assets/inverter.png';
 import ethernet from './../assets/ethernet.png';
 import heroImage from './../assets/automation-hero.png'; // Import a wide automation hero image
+import { scrollToTop } from "../utils/Helper";
 
 const tradingDetails = {
   "header": {
@@ -135,7 +136,7 @@ const TradingDetailsPage = () => {
       </div>
 
       <div className="back-button-container">
-        <button className="back-button" onClick={() => navigate('/')}>
+        <button className="back-button" onClick={() => {navigate('/');scrollToTop()}}>
           Back to Home
         </button>
       </div>

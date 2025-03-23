@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./TrainingDetailsPage.css";
+import { scrollToTop } from "../utils/Helper";
 
 const TrainingDetailsPage = () => {
   const navigate = useNavigate();
@@ -118,7 +119,7 @@ const TrainingDetailsPage = () => {
       </div>
 
       <div className="back-button-container">
-        <button className="back-button" onClick={() => navigate('/')}>
+        <button className="back-button" onClick={() => {navigate('/'); scrollToTop()}}>
           Back to Training
         </button>
       </div>

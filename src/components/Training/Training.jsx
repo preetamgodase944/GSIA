@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Training.css";
+import { scrollToTop } from "../../utils/Helper";
 
 const trainingPrograms = [
   {
@@ -65,8 +66,8 @@ const Training = () => {
 
 
   const onButtonClick = () => {
-    // TODO: Show details page
-    navigate('/training/details')
+    navigate('/training/details');
+    scrollToTop();
   };
 
   return (
