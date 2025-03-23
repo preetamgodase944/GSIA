@@ -2,8 +2,6 @@ import { useRef, useEffect, useState } from 'react';
 import './Hero.css';
 import image_1 from '../../assets/hero_ai_1.jpeg';
 import image_2 from '../../assets/hero_ai_2.jpeg';
-import next_icon from '../../assets/next-icon.png';
-import back_icon from '../../assets/left.png';
 
 export default function Hero() {
   const sliderRef = useRef(null);

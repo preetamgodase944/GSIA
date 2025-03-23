@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Training.css";
 
 const trainingPrograms = [
@@ -59,10 +60,13 @@ const trainingPrograms = [
 // ];
 
 const Training = () => {
-  const [showDetails, setShowDetails] = useState(false);
+  // const [showDetails, setShowDetails] = useState(false);
+  const navigate = useNavigate();
+
 
   const onButtonClick = () => {
     // TODO: Show details page
+    navigate('/training/details')
   };
 
   return (
@@ -85,7 +89,7 @@ const Training = () => {
       {/* Explore More Training Button */}
       <div className="view-all-training">
         <button className="view-all-btn" onClick={() => onButtonClick()}>
-          {showDetails ? "Hide Details" : "Show Details"}
+          {"Show Details"}
         </button>
       </div>
 

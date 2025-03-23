@@ -3,6 +3,7 @@ import Logo from '../Logo';
 import './Navbar.css';
 import menu_icon from '../../assets/menu-icon.svg';
 import close_icon from '../../assets/close-icon.svg';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -29,12 +30,12 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
-        <Logo />
+        <Link to="/"><Logo /></Link>
         
         <ul className={`navbar-links ${showMobileMenu ? 'show-menu' : ''}`}>
-          <li className="navbar-item"><a href="#products">Products</a></li>
-          <li className="navbar-item"><a href="#training">Training</a></li>
-          <li className="navbar-item"><a href="#contact-us">Contact Us</a></li>
+          <li className="navbar-item"><a href="/#products">Products</a></li>
+          <li className="navbar-item"><Link to="/training/details">Training</Link></li>
+          <li className="navbar-item"><a href="/#contact-us">Contact Us</a></li>
           <li className="navbar-item"><a href="#about-us">About Us</a></li>
         </ul>
         

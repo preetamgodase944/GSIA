@@ -1,0 +1,138 @@
+.training-details-page {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 40px 20px;
+    color: var(--text-color);
+}
+
+.training-details-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.training-details-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--button-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.training-details-header p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.training-module-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.training-module {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.training-module h2 {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 15px 25px;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.module-content {
+    padding: 25px;
+}
+
+.module-content h3 {
+    color: var(--accent-color);
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.module-content ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.module-content ul:last-child {
+    margin-bottom: 0;
+}
+
+.module-content li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.5;
+}
+
+.module-content li::before {
+    content: "✓";
+    color: var(--button-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.module-content p {
+    line-height: 1.6;
+}
+
+.back-button-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.back-button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .training-details-header h1 {
+        font-size: 28px;
+    }
+
+    .training-details-header p {
+        font-size: 16px;
+    }
+
+    .training-module h2 {
+        font-size: 20px;
+    }
+
+    .module-content {
+        padding: 20px;
+    }
+
+    .module-content h3 {
+        font-size: 18px;
+    }
+}
