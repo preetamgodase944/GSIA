@@ -18,12 +18,6 @@ const Footer = () => {
             </div>
 
             <div className='footer-contents'>
-                <div className='footer-content'>
-                    <h2>Company</h2>
-                    <ul className="footer-list">
-                        <li><a href="/#contact-us">About Us</a></li>
-                    </ul>
-                </div>
 
                 <div className='footer-content'>
                     <h2><Link to='/trading/details' onClick={() => scrollToTop()}>Trading</Link></h2>
@@ -64,6 +58,13 @@ const Footer = () => {
                         <li>MPM Layout, Mallathhalli</li>
                         <li>Bengaluru, India</li>
                         <li>560056</li>
+                    </ul>
+                </div>
+
+                <div className='footer-content'>
+                    <h2>Company</h2>
+                    <ul className="footer-list">
+                        <li><a href="/#contact-us">About Us</a></li>
                     </ul>
                 </div>
             </div>
