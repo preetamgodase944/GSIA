@@ -3,12 +3,15 @@ import './Footer.css';
 import Logo from '../Logo';
 import whatsappLogo from '../../assets/whatsapp.svg';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../../utils/Helper';
 
 const Footer = () => {
     return (
         <footer className='footer' id='about-us'>
             <div className='footer-top'>
-                <Logo imagePath="/assets/logo.png" height="80px" width="200px" />
+                <Link to='/' onClick={() => scrollToTop()}>
+                    <Logo imagePath="/assets/logo.png" height="80px" width="200px" />
+                </Link>
                 <p className='footer-tagline'>
                     Empowering industries with cutting-edge automation solutions.
                 </p>
@@ -23,24 +26,24 @@ const Footer = () => {
                 </div>
 
                 <div className='footer-content'>
-                    <h2><Link to='/trading/details'>Trading</Link></h2>
+                    <h2><Link to='/trading/details' onClick={() => scrollToTop()}>Trading</Link></h2>
                     <ul className="footer-list">
-                        <li><Link to='/trading/details'>WECON V-BOX (IIoT Gateway)</Link></li>
-                        <li><Link to='/trading/details'>WECON SERVO DRIVES</Link></li>
-                        <li><Link to='/trading/details'>WECON PLC</Link></li>
-                        <li><Link to='/trading/details'>WECON HMI</Link></li>
-                        <li><Link to='/trading/details'>WECON INVERTER</Link></li>
-                        <li><Link to='/trading/details'>INDUSTRIAL ETHERNET SWITCH</Link></li>
+                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON V-BOX (IIoT Gateway)</Link></li>
+                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON SERVO DRIVES</Link></li>
+                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON PLC</Link></li>
+                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON HMI</Link></li>
+                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON INVERTER</Link></li>
+                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>INDUSTRIAL ETHERNET SWITCH</Link></li>
                     </ul>
                 </div>
 
                 <div className='footer-content'>
-                    <h2><Link to='/training/details'>Training</Link></h2>
+                    <h2><Link to='/training/details' onClick={() => scrollToTop()}>Training</Link></h2>
                     <ul className="footer-list">
-                        <li><Link to='/training/details'>PLC Training</Link></li>
-                        <li><Link to='/training/details'>SCADA Training</Link></li>
-                        <li><Link to='/training/details'>HMI Training</Link></li>
-                        <li><Link to='/training/details'>Industrial IoT Training</Link></li>
+                        <li><Link to='/training/details' onClick={() => scrollToTop()}>PLC Training</Link></li>
+                        <li><Link to='/training/details' onClick={() => scrollToTop()}>SCADA Training</Link></li>
+                        <li><Link to='/training/details' onClick={() => scrollToTop()}>HMI Training</Link></li>
+                        <li><Link to='/training/details' onClick={() => scrollToTop()}>Industrial IoT Training</Link></li>
                     </ul>
                 </div>
 
@@ -82,6 +85,6 @@ const Footer = () => {
             <p className='footer-copyright'>&copy; {new Date().getFullYear()} GSIA. All Rights Reserved.</p>
         </footer>
     );
-}
+};
 
 export default Footer;

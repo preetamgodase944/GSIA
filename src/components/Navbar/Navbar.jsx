@@ -4,6 +4,7 @@ import './Navbar.css';
 import menu_icon from '../../assets/menu-icon.svg';
 import close_icon from '../../assets/close-icon.svg';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../../utils/Helper';
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -30,12 +31,18 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link to="/"><Logo /></Link>
+        <Link to="/" onClick={() => {
+          window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        }}><Logo /></Link>
         
         <ul className={`navbar-links ${showMobileMenu ? 'show-menu' : ''}`}>
           <li className="navbar-item"><a href="/#products">Products</a></li>
-          <li className="navbar-item"><Link to="/training/details">Training</Link></li>
-          <li className="navbar-item"><Link to="/trading/details">Trading</Link></li>
+          <li className="navbar-item"><Link to="/training/details" onClick={() => scrollToTop()}>Training</Link></li>
+          <li className="navbar-item"><Link to="/trading/details" onClick={() => scrollToTop()}>Trading</Link></li>
           <li className="navbar-item"><a href="/#contact-us">Contact Us</a></li>
           <li className="navbar-item"><a href="#about-us">About Us</a></li>
         </ul>

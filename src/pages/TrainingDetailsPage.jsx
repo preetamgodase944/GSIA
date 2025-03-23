@@ -104,7 +104,6 @@ const TrainingDetailsPage = () => {
           <div className="module-content">
             <h3>Internship Duration</h3>
             <p>4 to 12 weeks (Flexible schedules available)</p>
-            
             <h3>Mode of Training</h3>
             <p>Online & Offline (On-Site Training Available)</p>
           </div>
