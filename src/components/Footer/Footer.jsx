@@ -2,8 +2,7 @@ import React from 'react';
 import './Footer.css';
 import Logo from '../Logo';
 import whatsappLogo from '../../assets/whatsapp.svg';
-import facebookLogo from '../../assets/facebook.svg';
-import linkedinLogo from '../../assets/linkedin.svg'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -19,30 +18,29 @@ const Footer = () => {
                 <div className='footer-content'>
                     <h2>Company</h2>
                     <ul className="footer-list">
-                        <li><a href="#contact-us">About Us</a></li>
-                        <li><a href="#contact-us">Careers</a></li>
+                        <li><a href="/#contact-us">About Us</a></li>
                     </ul>
                 </div>
 
                 <div className='footer-content'>
-                    <h2>Products</h2>
+                    <h2><Link to='/trading/details'>Trading</Link></h2>
                     <ul className="footer-list">
-                        <li>HMI</li>
-                        <li>PLC</li>
-                        <li>V-BOX</li>
-                        <li>Servo Motors</li>
-                        <li>VFD</li>
-                        <li>Control Panels</li>
+                        <li><Link to='/trading/details'>WECON V-BOX (IIoT Gateway)</Link></li>
+                        <li><Link to='/trading/details'>WECON SERVO DRIVES</Link></li>
+                        <li><Link to='/trading/details'>WECON PLC</Link></li>
+                        <li><Link to='/trading/details'>WECON HMI</Link></li>
+                        <li><Link to='/trading/details'>WECON INVERTER</Link></li>
+                        <li><Link to='/trading/details'>INDUSTRIAL ETHERNET SWITCH</Link></li>
                     </ul>
                 </div>
 
                 <div className='footer-content'>
-                    <h2>Training</h2>
+                    <h2><Link to='/training/details'>Training</Link></h2>
                     <ul className="footer-list">
-                        <li>PLC Training</li>
-                        <li>SCADA Training</li>
-                        <li>HMI Training</li>
-                        <li>Industrial IoT Training</li>
+                        <li><Link to='/training/details'>PLC Training</Link></li>
+                        <li><Link to='/training/details'>SCADA Training</Link></li>
+                        <li><Link to='/training/details'>HMI Training</Link></li>
+                        <li><Link to='/training/details'>Industrial IoT Training</Link></li>
                     </ul>
                 </div>
 
