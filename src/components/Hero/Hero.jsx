@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import './Hero.css';
 import image_1 from '../../assets/hero_ai_1.jpeg';
 import image_2 from '../../assets/hero_ai_2.jpeg';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const sliderRef = useRef(null);
@@ -55,7 +56,7 @@ export default function Hero() {
             <div className="slide-content">
               <h1>Smart Solutions for Modern Industry</h1>
               <p>Enhancing productivity with intelligent automation systems</p>
-              <a href="#products" className="btn">View Solutions</a>
+              <Link to={"/trading/details"} className="btn">Explore Trading</Link>
             </div>
           </div>
         </div>
