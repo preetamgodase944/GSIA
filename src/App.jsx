@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Training from "./components/Training/Training";
 import "./App.css";
 import TrainingDetailsPage from "./pages/TrainingDetailsPage";
+import TradingDetailsPage from "./pages/TradingDetailsPage";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             }
           />
           <Route path="/training/details" element={<TrainingDetailsPage />} />
+          <Route path="/trading/details" element={<TradingDetailsPage />} />
         </Routes>
         <Footer />
       </div>

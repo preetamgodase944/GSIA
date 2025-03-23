@@ -57,7 +57,9 @@ const Footer = () => {
                 <div className='footer-content'>
                     <h2>Address</h2>
                     <ul className="footer-list">
-                        <li>No32 Ground Floor near MPM park,</li>
+                        <li>Global Source Industrial Automation</li>
+                        <li>No. 32, Ground Floor</li>
+                        <li>Opp. MPM park,</li>
                         <li>MPM Layout, Mallathhalli</li>
                         <li>Bengaluru, India</li>
                         <li>560056</li>

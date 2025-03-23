@@ -35,6 +35,7 @@ export default function Navbar() {
         <ul className={`navbar-links ${showMobileMenu ? 'show-menu' : ''}`}>
           <li className="navbar-item"><a href="/#products">Products</a></li>
           <li className="navbar-item"><Link to="/training/details">Training</Link></li>
+          <li className="navbar-item"><Link to="/trading/details">Trading</Link></li>
           <li className="navbar-item"><a href="/#contact-us">Contact Us</a></li>
           <li className="navbar-item"><a href="#about-us">About Us</a></li>
         </ul>
