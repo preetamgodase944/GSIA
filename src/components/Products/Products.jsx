@@ -1,96 +1,67 @@
 import { useState } from 'react';
 import './Products.css';
-import hmi from '../../assets/hmi.png';
-import servo from '../../assets/servo.png';
-import plc from '../../assets/plc.png';
-import v_box from '../../assets/v-box.png';
-import vfid from '../../assets/vfid.png';
-import electrical_control_panel from '../../assets/electrical-control-panel.png';
+import product_1 from '../../assets/product_1.png';
+import product_2 from '../../assets/product_2.png';
+import product_3 from '../../assets/product_3.png';
+import product_4 from '../../assets/product_4.png';
 
 export default function Products() {
   const [activeModal, setActiveModal] = useState(null);
-  
+
   // Product details with extended information
   const productDetails = {
     first: {
       title: "Electrical control panel for Packing Machines",
-      image: hmi,
-      shortDesc: "GSIA HMI has been widely recognized by the market for being economical and practical, with fast response speed, high configuration, and multiple options.",
-      fullDesc: "Our Human Machine Interface (HMI) solutions provide intuitive control interfaces for industrial applications. Built with advanced touchscreen technology and configurable displays, GSIA HMIs offer reliability and ease of use. Compatible with all major industrial protocols and featuring customizable widgets, our HMIs integrate seamlessly with your existing systems.",
+      image: product_1,
+      shortDesc: "GSIA control panels for packing machines integrate IoT technology for real-time monitoring and high accuracy.",
+      fullDesc: "GSIA manufactures control panels for packing machinery across all packaging industries. Leveraging IoT-developed Human Machine Interfaces (HMI) and Programmable Logic Controllers (PLC), our solutions ensure packaging accuracy of ±10 grams. The Internet of Things (IoT) integration allows customers to monitor displays anytime, anywhere, enhancing operational efficiency and control.",
       features: [
-        "Touch screen sizes from 4.3\" to 15\"",
-        "High-resolution displays with wide viewing angles",
-        "Multiple communication ports",
-        "IP65 front panel waterproof design",
-        "Intuitive programming software"
+        "IoT-enabled real-time monitoring",
+        "Packaging accuracy of ±10 grams",
+        "Advanced HMI touchscreen interface",
+        "PLC-based control systems",
+        "Customizable for all packaging industries"
       ]
     },
     second: {
       title: "Electrical Control panel for Vibrator feeding Applications",
-      image: servo,
-      shortDesc: "GSIA Servo Drives feature high response times, easy debugging, and strong protection mechanisms.",
-      fullDesc: "GSIA Servo systems deliver precise motion control for demanding applications. Our servo drives and motors provide exceptional accuracy, quick response times, and enhanced stability. Available in various power ranges and configurations to meet diverse industrial requirements.",
+      image: product_2,
+      shortDesc: "GSIA control panels for vibrator feeding applications use automation technology tailored for grain milling industries.",
+      fullDesc: "GSIA designs control panels for vibrator feeding applications using cutting-edge automation technology for grain milling industries. Our innovative control logic is customized to meet specific customer requirements, backed by a dedicated service team that resolves issues swiftly, ensuring minimal downtime and maximum productivity.",
       features: [
-        "High-precision positioning control",
-        "Real-time torque monitoring",
-        "Automatic tuning functions",
-        "Multiple control modes",
-        "Integrated safety features"
+        "Tailored automation for grain milling",
+        "Innovative control logic design",
+        "Rapid-response service team",
+        "High reliability and uptime",
+        "Customizable to customer needs"
       ]
     },
     third: {
       title: "Electrical Control panel for Stitching conveyor and loader",
-      image: plc,
-      shortDesc: "GSIA PLC offers high precision, fast speed, and strong stability for your automation needs.",
-      fullDesc: "Our Programmable Logic Controllers (PLCs) are the backbone of industrial automation systems. GSIA PLCs combine reliability with performance to deliver consistent control across manufacturing processes. From compact units to modular systems, our PLC range can be scaled to fit projects of any size.",
+      image: product_3,
+      shortDesc: "GSIA control panels for stitching conveyors and loaders optimize speed and efficiency with low power consumption.",
+      fullDesc: "GSIA manufactures control panels for stitching conveyor and loader systems, primarily for grain milling industries. Our advanced technology regulates speed and direction, reduces power consumption, and boosts efficiency, delivering reliable performance tailored to industrial needs.",
       features: [
-        "Fast scanning and execution times",
-        "Modular expansion capabilities",
-        "Built-in Ethernet connectivity",
-        "Comprehensive instruction set",
-        "User-friendly programming environment"
+        "Speed and direction regulation",
+        "Low power consumption design",
+        "Enhanced operational efficiency",
+        "Robust conveyor and loader control",
+        "Optimized for grain milling industries"
       ]
     },
     fourth: {
-      title: "Electrical control panel Loadcell weighing application",
-      image: v_box,
-      shortDesc: "V-BOX is the foundational hardware of GSIA's IIoT platform, enabling advanced connectivity.",
-      fullDesc: "The GSIA V-BOX serves as the gateway for Industrial Internet of Things applications. This powerful edge device collects, processes, and transmits data from industrial equipment to cloud platforms. With robust security features and multiple connectivity options, V-BOX bridges the gap between operational technology and information technology.",
+      title: "Complete solution for Water treatment plants (Domestic & Industrial)",
+      image: product_4,
+      shortDesc: "GSIA provides end-to-end water treatment solutions with smart automation and sustainable technology.",
+      fullDesc: "At GSIA, we offer comprehensive solutions for domestic and industrial water treatment plants, covering design, engineering, automation, installation, and maintenance. Our expertise includes drinking water treatment, industrial process water systems, effluent and sewage treatment, and zero liquid discharge (ZLD) solutions. With IoT-enabled SCADA and PLC-based monitoring, we deliver efficient, sustainable, and compliant water management systems.",
       features: [
-        "Multiple protocol support",
-        "Edge computing capabilities",
-        "Secure data transmission",
-        "Remote management tools",
-        "Scalable architecture"
+        "Custom water treatment design",
+        "SCADA & PLC-based real-time control",
+        "IoT-enabled smart monitoring",
+        "Energy-efficient and sustainable systems",
+        "Compliance with WHO, EPA, and ISO standards"
       ]
-    },
-    fifth: {
-      title: "Complete solution for Water treatment plants Domestic/Industrial",
-      image: vfid,
-      shortDesc: "GSIA VFID technology provides reliable identification and tracking capabilities for industrial applications.",
-      fullDesc: "Our Visual Field Identification Device (VFID) technology enhances traceability and quality control in manufacturing environments. Using advanced imaging and recognition algorithms, VFID systems accurately identify, verify, and track components throughout production processes. Improve efficiency and reduce errors with GSIA's intelligent identification solutions.",
-      features: [
-        "High-speed code reading",
-        "Multi-code recognition",
-        "Quality verification",
-        "Production statistics",
-        "Integration with MES systems"
-      ]
-    },
-    // sixth: {
-    //   title: "Electrical Control Panel",
-    //   image: electrical_control_panel,
-    //   shortDesc: "Our electrical control panels provide centralized management of industrial automation systems.",
-    //   fullDesc: "GSIA electrical control panels are engineered for reliability and performance. Custom-designed to your specifications, our panels integrate control components into a centralized system for efficient operation. Each panel undergoes rigorous testing to ensure compliance with international standards and regulations.",
-    //   features: [
-    //     "Custom design services",
-    //     "Quality components from trusted brands",
-    //     "Comprehensive documentation",
-    //     "Factory acceptance testing",
-    //     "Technical support and maintenance"
-    //   ]
-    // }
-    // Note: Removed the 'panel' product to demonstrate with 5 products
+    }
   };
 
   // Handle learn more click
