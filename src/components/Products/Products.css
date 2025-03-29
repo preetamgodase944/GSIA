@@ -80,6 +80,9 @@
 
 .product-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 200px);
 }
 
 .product-title {
@@ -94,27 +97,30 @@
   color: #666;
   margin-bottom: 1.25rem;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .product-link {
   display: inline-block;
+  width: fit-content;
   color: var(--primary-color);
   font-weight: 500;
   text-decoration: none;
   font-size: 0.95rem;
   position: relative;
-  padding-bottom: 2px;
+  padding-bottom: 20px;
+  margin-top: auto;
 }
 
 .product-link:after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   width: 0;
   height: 2px;
   background-color: var(--primary-color);
-  transition: width 0.3s ease;
+  transition: width 0.4s ease;
 }
 
 .product-link:hover:after {
@@ -151,8 +157,15 @@
 }
 
 @keyframes modalFadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .modal-close-btn {
@@ -267,9 +280,11 @@
   .product-card {
     width: calc(50% - 15px);
   }
+
   .product-image-container {
     height: 180px;
   }
+
   .product-modal {
     width: 95%;
   }
@@ -279,13 +294,16 @@
   .section-title h2 {
     font-size: 2rem;
   }
+
   .section-description {
     font-size: 1rem;
     padding: 0 1rem;
   }
+
   .modal-image-container {
     height: 200px;
   }
+
   .modal-content {
     padding: 1.5rem;
   }
@@ -296,15 +314,19 @@
     width: 100%;
     max-width: 320px;
   }
+
   .product-image-container {
     height: 220px;
   }
+
   .modal-image-container {
     height: 180px;
   }
+
   .modal-content h2 {
     font-size: 1.5rem;
   }
+
   .modal-footer {
     justify-content: center;
   }
