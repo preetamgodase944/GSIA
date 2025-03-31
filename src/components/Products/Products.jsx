@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Products.css';
-import product_1 from '../../assets/product_1.png';
+import product_1a from '../../assets/product_1a.png';
 import product_2 from '../../assets/product_2.png';
 import product_3 from '../../assets/product_3.png';
 import product_4 from '../../assets/product_4.png';
@@ -12,7 +12,7 @@ export default function Products() {
   const productDetails = {
     first: {
       title: "Electrical control panel for Packing Machines",
-      image: product_1,
+      image: product_1a,
       shortDesc: "GSIA control panels for packing machines integrate IoT technology for real-time monitoring and high accuracy.",
       fullDesc: "GSIA manufactures control panels for packing machinery across all packaging industries. Leveraging IoT-developed Human Machine Interfaces (HMI) and Programmable Logic Controllers (PLC), our solutions ensure packaging accuracy of ±10 grams. The Internet of Things (IoT) integration allows customers to monitor displays anytime, anywhere, enhancing operational efficiency and control.",
       features: [
