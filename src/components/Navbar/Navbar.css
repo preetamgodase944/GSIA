@@ -1,110 +1,132 @@
+/* src/components/Navbar/Navbar.css */
+
+/* Solid, high-contrast background */
 .navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    height: 70px;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar-scrolled {
-    height: 60px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    height: 100%;
-  }
-  
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.755); /* e.g. a vibrant teal or your brand color */
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: none;
+  z-index: 1000;
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+/* Slightly darker when scrolled */
+.navbar-scrolled {
+  background-color: darken(var(--primary-color), 10%);
+  height: 60px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 8px;
+}
+
+.navbar-item a,
+.navbar-item .active {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+/* Hover state */
+.navbar-item a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Active link */
+.navbar-item .active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Mobile menu toggle */
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile styles */
+@media (max-width: 950px) {
   .navbar-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    transition: all 0.3s ease;
+    position: fixed;
+    top: 70px;
+    right: -280px;
+    flex-direction: column;
+    background: var(--primary-color);
+    width: 280px;
+    height: calc(100vh - 70px);
+    padding: 20px 0;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
   }
-  
+
+  .navbar-scrolled .navbar-links {
+    top: 60px;
+  }
+
+  .navbar-links.show-menu {
+    right: 0;
+  }
+
   .navbar-item {
-    margin: 0 8px;
+    margin: 8px 20px;
+    width: calc(100% - 40px);
   }
-  
-  .navbar-item a {
-    display: block;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 10px 16px;
-    border-radius: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.2s ease;
+
+  .navbar-item a,
+  .navbar-item .active {
+    padding: 12px 16px;
+    text-align: left;
+    border-radius: 8px;
+    font-size: 16px;
   }
-  
-  .navbar-item a:hover {
-    background-color: rgba(29, 91, 76, 0.08);
-    color: var(--primary-color);
-    transform: translateY(-2px);
-  }
-  
+
   .navbar-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
+    display: block;
   }
-  
-  .menu-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  @media (max-width: 950px) {
-    .navbar-links {
-      position: fixed;
-      top: 70px;
-      right: -280px;
-      flex-direction: column;
-      background: rgba(255, 255, 255, 0.98);
-      width: 280px;
-      height: calc(100vh - 70px);
-      padding: 20px 0;
-      transition: right 0.3s ease;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar-scrolled .navbar-links {
-      top: 60px;
-    }
-  
-    .navbar-links.show-menu {
-      right: 0;
-    }
-  
-    .navbar-item {
-      margin: 8px 20px;
-      width: calc(100% - 40px);
-    }
-  
-    .navbar-item a {
-      padding: 12px 16px;
-      text-align: left;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-  
-    .navbar-toggle {
-      display: block;
-    }
-  }
+}
