@@ -12,13 +12,37 @@ export default function Navbar() {
   const location = useLocation();
 
   // Add/remove scrolled class on scroll
-  // useEffect(() => {
-  //   const handleScroll = () => setScrolled(window.scrollY > 50);
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMobileMenu = () => setShowMobileMenu(prev => !prev);
+
+  // Updated function to handle section navigation
+  const scrollToSection = (sectionId) => {
+    // First navigate to homepage if not already there
+    if (location.pathname !== '/') {
+      // We need to set a timeout to allow the page to change before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // Already on homepage, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Close mobile menu if open
+    if (showMobileMenu) {
+      setShowMobileMenu(false);
+    }
+  };
 
   const isLinkActive = (to, hash) => {
     if (hash) {
@@ -35,27 +59,38 @@ export default function Navbar() {
           className="navbar-logo"
           onClick={() => {
             window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+            if (showMobileMenu) setShowMobileMenu(false);
           }}
         >
-          <Logo 
-          height='60px'
-          />
+          <Logo height='60px' />
         </Link>
-
         <ul className={`navbar-links ${showMobileMenu ? 'show-menu' : ''}`}>
           <li className="navbar-item">
-            <a
-              href="/#products"
-              className={isLinkActive('/', '#products') ? 'active' : ''}
+            <Link
+              to="/"
+              className={`nav-button ${location.pathname === '/' && !location.hash ? 'active' : ''}`}
+              onClick={() => {
+                window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+                if (showMobileMenu) setShowMobileMenu(false);
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="navbar-item">
+            <Link
+              to="/#products"
+              className={`nav-button ${isLinkActive('/', '#products') ? 'active' : ''}`}
+              onClick={() => scrollToSection('products')}
             >
               Products
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
             <Link
               to="/training/details"
               onClick={scrollToTop}
-              className={isLinkActive('/training/details') ? 'active' : ''}
+              className={`nav-button ${isLinkActive('/training/details') ? 'active' : ''}`}
             >
               Training
             </Link>
@@ -64,29 +99,30 @@ export default function Navbar() {
             <Link
               to="/trading/details"
               onClick={scrollToTop}
-              className={isLinkActive('/trading/details') ? 'active' : ''}
+              className={`nav-button ${isLinkActive('/trading/details') ? 'active' : ''}`}
             >
               Trading
             </Link>
           </li>
           <li className="navbar-item">
-            <a
-              href="/#contact-us"
-              className={isLinkActive('/', '#contact-us') ? 'active' : ''}
+            <Link
+              to="/#contact-us"
+              className={`nav-button ${isLinkActive('/', '#contact-us') ? 'active' : ''}`}
+              onClick={() => scrollToSection('contact-us')}
             >
               Contact Us
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a
-              href="/#about-us"
-              className={isLinkActive('/', '#about-us') ? 'active' : ''}
+            <Link
+              to="/#about-us"
+              className={`nav-button ${isLinkActive('/', '#about-us') ? 'active' : ''}`}
+              onClick={() => scrollToSection('about-us')}
             >
               About Us
-            </a>
+            </Link>
           </li>
         </ul>
-
         <button
           className="navbar-toggle"
           onClick={toggleMobileMenu}
