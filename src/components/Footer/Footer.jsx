@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className='footer-content'>
                     <h2><Link to='/trading/details' onClick={() => scrollToTop()}>Trading</Link></h2>
                     <ul className="footer-list">
-                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON V-BOX (IIoT Gateway)</Link></li>
+                        <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON V-BOX (Iot Gateway)</Link></li>
                         <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON SERVO DRIVES</Link></li>
                         <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON PLC</Link></li>
                         <li><Link to='/trading/details' onClick={() => scrollToTop()}>WECON HMI</Link></li>

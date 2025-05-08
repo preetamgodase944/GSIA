@@ -37,7 +37,9 @@ export default function Navbar() {
             window.scroll({ top: 0, left: 0, behavior: 'smooth' });
           }}
         >
-          <Logo />
+          <Logo 
+          height='60px'
+          />
         </Link>
 
         <ul className={`navbar-links ${showMobileMenu ? 'show-menu' : ''}`}>

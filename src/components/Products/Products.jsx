@@ -81,7 +81,7 @@ export default function Products() {
         <div className="section-title">
           <h2>Our Products</h2>
           <p className="section-description">
-            GSIA is one of the leading global manufacturers. We independently develop, manufacture, and sell HMI, PLC, IIoT V-BOX, SERVO, and INVERTER solutions.
+            GSIA is one of the leading global manufacturers. We independently develop, manufacture, and sell HMI, PLC, IoT V-BOX, SERVO, and INVERTER solutions.
           </p>
         </div>
         

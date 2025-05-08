@@ -18,9 +18,9 @@ const tradingDetails = {
   "products": [
     {
       "id": "vbox",
-      "title": "WECON V-BOX (IIoT Gateway)",
+      "title": "WECON V-BOX (Iot Gateway)",
       "image": vbox,
-      "description": "Wecon IIoT Gateway (V-BOX) is the basic hardware of Wecon IIoT platform(V-NET). It is an indispensable equipment about information exchange and protocol conversion for the communication between the IoT cloud platform and the system.",
+      "description": "Wecon Iot Gateway (V-BOX) is the basic hardware of Wecon Iot platform(V-NET). It is an indispensable equipment about information exchange and protocol conversion for the communication between the IoT cloud platform and the system.",
       "features": [
         "Define LUA scripts to connect PLC-controlled machines with cloud platforms",
         "Connect with platforms like HUAWEI, Google IoT, Alibaba Cloud, etc.",
@@ -64,7 +64,7 @@ const tradingDetails = {
         "Economical and practical interface solutions",
         "Fast response speed for real-time monitoring",
         "High configuration capabilities",
-        "PI series includes IIoT HMI series, Speed version of PI 3000ie series, Luxury version of PI 9000 series",
+        "PI series includes Iot HMI series, Speed version of PI 3000ie series, Luxury version of PI 9000 series",
         "Features include installment payment, HMI formula, user authority management and multi-language display"
       ]
     },
