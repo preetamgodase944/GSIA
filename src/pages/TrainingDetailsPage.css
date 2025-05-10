@@ -1,106 +1,51 @@
+/* General Styles */
 .training-details-page {
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 0 auto;
     padding: 40px 20px;
     color: var(--text-color);
-}
-
-.training-details-header {
-    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    overflow: hidden;
     margin-bottom: 50px;
-}
-
-.training-details-header h1 {
-    font-size: 36px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* filter: brightness(85%); */
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 38px;
     font-weight: bold;
-    color: var(--button-color);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.training-details-header p {
+    margin-bottom: 20px; 
+    color: #ffffff;
+  }
+  
+  .hero-content p {
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.training-module-section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.training-module {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.training-module:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.training-module h2 {
-    background-color: var(--button-color);
-    color: #fff;
-    padding: 15px 25px;
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.module-content {
-    padding: 25px;
-}
-
-.module-content h3 {
-    color: var(--accent-color);
-    font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.module-content ul {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-
-.module-content ul:last-child {
-    margin-bottom: 0;
-}
-
-.module-content li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-    line-height: 1.5;
-}
-
-.module-content li::before {
-    content: "✓";
-    color: var(--button-color);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-.module-content p {
-    line-height: 1.6;
-}
-
-.back-button-container {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.back-btn {
+  }
+  
+  .download-btn {
     background-color: var(--accent-color-2);
     color: #fff;
     padding: 12px 30px;
@@ -110,31 +55,158 @@
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-base);
-}
-
-.back-btn:hover {
-    /* background-color: var(--accent-color); */
+  }
+  
+  .download-btn:hover {
     transform: translateY(-5px);
-}
-
-@media (max-width: 768px) {
-    .training-details-header h1 {
-        font-size: 28px;
+  }
+  
+  /* About Us Section */
+  .about-us-section {
+    margin-bottom: 50px;
+  }
+  
+  .about-us-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Training Modules */
+  .training-module-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .training-module {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 25px;
+  }
+  
+  .training-module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .module-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .training-module h3 {
+    color: var(--accent-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .training-module ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .training-module li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.5;
+  }
+  
+  .training-module li::before {
+    content: "✓";
+    color: var(--button-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  /* Call to Action */
+  .cta-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .cta-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .enroll-btn {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+  }
+  
+  .enroll-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Back Button */
+  .back-button-container {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .back-btn {
+    background-color: var(--accent-color-2);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+  }
+  
+  .back-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+        padding-top: 5rem;
+        color: #fff;
+      font-size: 16px;
+    }
+  
+    .hero-content p {
+      font-size: 12px;
     }
 
-    .training-details-header p {
-        font-size: 16px;
+    .download-btn {
+        padding: 6px 15px;
+        font-size: 12px;
     }
-
-    .training-module h2 {
-        font-size: 20px;
+  
+    .training-module h3 {
+      font-size: 20px;
     }
-
-    .module-content {
-        padding: 20px;
+  
+    .module-grid {
+      grid-template-columns: 1fr;
     }
-
-    .module-content h3 {
-        font-size: 18px;
-    }
-}
+  }
