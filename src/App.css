@@ -1,6 +1,6 @@
 :root {
   /* Primary Brand Colors */
-  --primary-color: #1d5b4c;
+  --primary-color: rgb(176, 56, 47);
   /* Dark teal from logo */
   --primary-light: #2a8a74;
   /* Lighter shade for hover states */
@@ -8,7 +8,7 @@
   /* Darker shade for text/contrast */
 
   /* Secondary Colors */
-  --secondary-color: #f8e8d4;
+  --secondary-color: rgba(24, 24, 24, 0);
   /* Warm beige from logo background */
   --secondary-light: #fef5eb;
   /* Lighter beige for backgrounds */
