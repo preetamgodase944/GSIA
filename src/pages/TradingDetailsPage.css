@@ -83,7 +83,7 @@
 }
 
 .trading-module h2 {
-  background-color: var(--text-color);
+  background-color: rgba(34, 34, 34, 0.8);
   color: #fff;
   padding: 15px 25px;
   margin: 0;
