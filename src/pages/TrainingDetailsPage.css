@@ -17,6 +17,8 @@
     text-align: center;
     color: white;
     margin-bottom: 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   
   .hero-image {
@@ -27,6 +29,14 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    max-width: 700px;
   }
   
   .hero-content h1 {
@@ -56,126 +66,320 @@
   
   .download-btn:hover {
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   
   /* About Us */
   .about-us-section {
     margin-bottom: 60px;
     text-align: center;
+    padding: 0 20px;
   }
   
   .about-us-section h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
   }
   
-  /* Module List */
-  .module-list {
-    display: grid;
+  .about-us-section h2:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: var(--accent-color-2);
+  }
+  
+  .about-us-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Training Module Section - MODERN REDESIGN */
+  .training-module-section {
+    margin: 80px 0;
+  }
+  
+  .training-module-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .training-module-section h2:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: var(--accent-color-2);
+  }
+  
+  .modules-container {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
   }
   
   .module-item {
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--accent-color-2);
+  }
+  
+  .module-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .module-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .module-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color-2);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
   }
   
   .module-item h3 {
-    font-size: 22px;
+    font-size: 24px;
     color: var(--text-color);
-    margin-bottom: 15px;
+    margin: 0;
     font-weight: 600;
   }
   
-  .module-item ul {
+  .module-content {
+    padding-left: 55px;
+  }
+  
+  /* List styling */
+  .module-content-list {
     list-style-type: none;
     padding-left: 0;
+    margin: 0;
   }
   
-  .module-item li {
-    margin-bottom: 10px;
+  .module-content-list li {
+    margin-bottom: 12px;
     position: relative;
     padding-left: 25px;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   
-  .module-item li::before {
-    content: "•";
+  .module-content-list li:before {
+    content: "✓";
     position: absolute;
     left: 0;
     color: var(--accent-color-2);
-    font-size: 18px;
+    font-weight: bold;
   }
   
-  .module-item p {
-    line-height: 1.6;
+  .module-content-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Paragraph styling */
+  .module-content-paragraph {
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+  }
+  
+  /* Labeled list styling */
+  .module-content-labeled-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .labeled-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+  }
+  
+  .labeled-item .label {
+    font-weight: bold;
+    color: var(--text-color);
+    min-width: 80px;
+  }
+  
+  .labeled-item .value {
+    color: #555;
   }
   
   /* Call to Action */
   .cta-section {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #1f4037, #99f2c8);
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
     color: white;
-    border-radius: 12px;
-    margin-top: 60px;
+    border-radius: 15px;
+    margin-top: 80px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(255,255,255,0.05)' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.3;
+    z-index: 0;
   }
   
   .cta-section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 32px;
+    margin-bottom: 20px;
     color: #fff;
+    position: relative;
+    z-index: 1;
   }
   
   .cta-section p {
     font-size: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 1;
   }
   
   .enroll-btn {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 12px 30px;
-    font-size: 16px;
-    border-radius: 5px;
+    background-color: white;
+    border: none;
+    color: var(--accent-color-2);
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .enroll-btn:hover {
-    background-color: white;
-    color: var(--accent-color-2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
   
   .enroll-btn a {
     color: inherit;
     text-decoration: none;
-    font-weight: bold;
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
     .training-details-page {
-        margin-top: 25px;
+      padding: 20px 15px;
+      margin-top: 25px;
     }
+    
     .hero-section {
       height: 400px;
     }
   
+    .hero-content {
+      padding: 20px;
+      width: 90%;
+    }
+  
     .hero-content h1 {
-      font-size: 28px;
+      font-size: 26px;
     }
   
     .hero-content p {
       font-size: 16px;
     }
-  
+    
+    .about-us-section h2,
+    .training-module-section h2,
+    .cta-section h2 {
+      font-size: 24px;
+    }
+    
+    .module-header {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    
+    .module-content {
+      padding-left: 0;
+      margin-top: 15px;
+    }
+    
     .module-item h3 {
       font-size: 20px;
+    }
+    
+    .cta-section {
+      padding: 40px 20px;
+    }
+    
+    .enroll-btn {
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      height: 350px;
+    }
+    
+    .hero-content h1 {
+      font-size: 22px;
+    }
+    
+    .about-us-section p,
+    .cta-section p {
+      font-size: 16px;
+    }
+    
+    .module-item {
+      padding: 20px 15px;
+    }
+    
+    .module-number {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
     }
   }

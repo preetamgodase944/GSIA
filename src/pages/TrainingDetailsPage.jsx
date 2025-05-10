@@ -1,10 +1,101 @@
-import React from "react";
+import React from "react"; 
 import { Link, useNavigate } from "react-router-dom";
 import "./TrainingDetailsPage.css";
 
 // Import images
 import heroImage from "../assets/training-hero.png";
 import { downloadBrochure } from "../components/Helper/CommonFuctions";
+
+// Training modules data separated from UI
+const trainingModules = [
+  {
+    id: "plc",
+    title: "PLC Training",
+    content: [
+      "Introduction to PLC Architecture & Components",
+      "Understanding Digital & Analog Inputs/Outputs",
+      "PLC Programming with Ladder Logic",
+      "Timers, Counters, Arithmetic & Logic Operations",
+      "Upload, Download & Monitoring of Programs",
+      "Troubleshooting & Best Practices"
+    ],
+    type: "list"
+  },
+  {
+    id: "hmi-scada",
+    title: "HMI and SCADA Training",
+    content: [
+      "Introduction to HMI & Various Industry Models",
+      "Designing HMI Screens for Monitoring & Control",
+      "Connecting HMI with PLC",
+      "Real-Time Data Visualization & Alerts",
+      "SCADA Software Overview & Industrial Applications",
+      "Creating & Editing Graphical Interfaces",
+      "Real-Time & Historical Data Trending",
+      "Alarm & Event Management",
+      "Communication with PLC & Field Devices",
+      "Writing Automation Scripts"
+    ],
+    type: "list"
+  },
+  {
+    id: "vfd-servo",
+    title: "VFD and Servo Training",
+    content: [
+      "Introduction to VFD and Motor Control",
+      "Hands-on configuration of VFD parameters, start/stop control, and speed variation",
+      "Integration of VFD with PLC & SCADA"
+    ],
+    type: "list"
+  },
+  {
+    id: "comm-protocols",
+    title: "Industrial Communication Protocols",
+    content: [
+      "Fieldbus (Modbus RTU, PROFIBUS, CAN Bus)",
+      "Ethernet-Based Protocols (PROFINET, EtherNet/IP, Modbus TCP/IP)"
+    ],
+    type: "list"
+  },
+  {
+    id: "crash-course",
+    title: "Industrial Automation Crash Course",
+    content: [
+      "Introduction to Industrial Automation",
+      "PLC Programming & Implementation",
+      "SCADA & HMI Development",
+      "Variable Frequency Drives (VFDs) & Motion Control",
+      "Industrial Communication Protocols",
+      "Industry Projects & Hands-On Training"
+    ],
+    type: "list"
+  },
+  {
+    id: "pgdia",
+    title: "PGDIA for Industry 4.0 Course",
+    content: [
+      "Comprehensive training program focusing on modern industrial automation systems and Industry 4.0 concepts."
+    ],
+    type: "paragraph"
+  },
+  {
+    id: "internship",
+    title: "Internship Programme",
+    content: [
+      { label: "Duration", value: "4 to 12 weeks (Flexible schedules available)" },
+      { label: "Mode", value: "Online & Offline (On-Site Training Available)" }
+    ],
+    type: "labeled-list"
+  },
+  {
+    id: "academic",
+    title: "Academic Projects (Engineering/Diploma)",
+    content: [
+      "Guidance and support for academic projects related to industrial automation and control systems."
+    ],
+    type: "paragraph"
+  }
+];
 
 const TrainingDetailsPage = () => {
   const navigate = useNavigate();
@@ -16,6 +107,39 @@ const TrainingDetailsPage = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }, 100);
+  };
+
+  // Render different types of content based on module type
+  const renderModuleContent = (module) => {
+    switch (module.type) {
+      case "list":
+        return (
+          <ul className="module-content-list">
+            {module.content.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        );
+      case "paragraph":
+        return (
+          <p className="module-content-paragraph">
+            {module.content}
+          </p>
+        );
+      case "labeled-list":
+        return (
+          <div className="module-content-labeled-list">
+            {module.content.map((item, idx) => (
+              <div key={idx} className="labeled-item">
+                <span className="label">{item.label}:</span>
+                <span className="value">{item.value}</span>
+              </div>
+            ))}
+          </div>
+        );
+      default:
+        return null;
+    }
   };
 
   return (
@@ -42,89 +166,22 @@ const TrainingDetailsPage = () => {
         </p>
       </div>
 
-      {/* Training Modules */}
-      <div className="training-module-section">
+      {/* Training Modules - Modernized Section */}
+      <div className="training-module-section" id="training-modules">
         <h2>Explore Our Training Modules</h2>
-        <div className="module-list">
-          <div className="module-item">
-            <h3>PLC Training</h3>
-            <ul>
-              <li>Introduction to PLC Architecture & Components</li>
-              <li>Understanding Digital & Analog Inputs/Outputs</li>
-              <li>PLC Programming with Ladder Logic</li>
-              <li>Timers, Counters, Arithmetic & Logic Operations</li>
-              <li>Upload, Download & Monitoring of Programs</li>
-              <li>Troubleshooting & Best Practices</li>
-            </ul>
-          </div>
-
-          <div className="module-item">
-            <h3>HMI and SCADA Training</h3>
-            <ul>
-              <li>Introduction to HMI & Various Industry Models</li>
-              <li>Designing HMI Screens for Monitoring & Control</li>
-              <li>Connecting HMI with PLC</li>
-              <li>Real-Time Data Visualization & Alerts</li>
-              <li>SCADA Software Overview & Industrial Applications</li>
-              <li>Creating & Editing Graphical Interfaces</li>
-              <li>Real-Time & Historical Data Trending</li>
-              <li>Alarm & Event Management</li>
-              <li>Communication with PLC & Field Devices</li>
-              <li>Writing Automation Scripts</li>
-            </ul>
-          </div>
-
-          <div className="module-item">
-            <h3>VFD and Servo Training</h3>
-            <ul>
-              <li>Introduction to VFD and Motor Control</li>
-              <li>Hands-on configuration of VFD parameters, start/stop control, and speed variation</li>
-              <li>Integration of VFD with PLC & SCADA</li>
-            </ul>
-          </div>
-
-          <div className="module-item">
-            <h3>Industrial Communication Protocols</h3>
-            <ul>
-              <li>Fieldbus (Modbus RTU, PROFIBUS, CAN Bus)</li>
-              <li>Ethernet-Based Protocols (PROFINET, EtherNet/IP, Modbus TCP/IP)</li>
-            </ul>
-          </div>
-
-          <div className="module-item">
-            <h3>Industrial Automation Crash Course</h3>
-            <ul>
-              <li>Introduction to Industrial Automation</li>
-              <li>PLC Programming & Implementation</li>
-              <li>SCADA & HMI Development</li>
-              <li>Variable Frequency Drives (VFDs) & Motion Control</li>
-              <li>Industrial Communication Protocols</li>
-              <li>Industry Projects & Hands-On Training</li>
-            </ul>
-          </div>
-
-          <div className="module-item">
-            <h3>PGDIA for Industry 4.0 Course</h3>
-            <p>
-              Comprehensive training program focusing on modern industrial automation systems and Industry 4.0 concepts.
-            </p>
-          </div>
-
-          <div className="module-item">
-            <h3>Internship Programme</h3>
-            <ul>
-              <li><strong>Duration:</strong> 4 to 12 weeks (Flexible schedules available)</li>
-              <li><strong>Mode:</strong> Online & Offline (On-Site Training Available)</li>
-            </ul>
-          </div>
-
-          <div className="module-item">
-            <h3>Academic Projects (Engineering/Diploma)</h3>
-            <p>
-              Guidance and support for academic projects related to industrial automation and control systems.
-            </p>
-          </div>
-
+        
+        <div className="modules-container">
+          {trainingModules.map((module, index) => (
+            <div className="module-item" key={module.id} id={module.id}>
+              <div className="module-header">
+                <span className="module-number">{index + 1}</span>
+                <h3>{module.title}</h3>
+              </div>
+              <div className="module-content">
+                {renderModuleContent(module)}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
