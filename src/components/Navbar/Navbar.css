@@ -4,13 +4,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.555);
+  background-color: rgb(24, 24, 24);
   /** e.g. a vibrant teal or your brand color **/
   color: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: none;
   z-index: 1000;
-  height: 90px;
+  height: 65px;
   transition: all 0.3s ease;
 }
 
@@ -120,12 +120,12 @@
 @media (max-width: 950px) {
   .navbar-links {
     position: fixed;
-    top: 70px;
+    top: 65px;
     right: -280px;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.9);
     width: 280px;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 65px);
     padding: 20px 0;
     transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);

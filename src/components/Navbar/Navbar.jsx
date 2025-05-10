@@ -62,7 +62,7 @@ export default function Navbar() {
             if (showMobileMenu) setShowMobileMenu(false);
           }}
         >
-          <Logo height='60px' />
+          <Logo height='55px' />
         </Link>
         <ul className={`navbar-links ${showMobileMenu ? 'show-menu' : ''}`}>
           <li className="navbar-item">
