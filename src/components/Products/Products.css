@@ -264,7 +264,7 @@
 }
 
 .contact-btn {
-  background-color: var(--primary-color);
+  background-color: #212ea0e1;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -275,10 +275,12 @@
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  transition: all var(--transition-base);
 }
 
 .contact-btn:hover {
-  background-color: var(--primary-dark);
+  transform: translateY(-5px);
+  color: #fff;
 }
 
 /* Responsive styles with improved mobile experience */

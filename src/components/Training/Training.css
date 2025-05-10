@@ -55,7 +55,7 @@
 }
 
 .view-all-btn {
-    background-color: var(--button-color);
+    background: #212ea0e1;
     color: #fff;
     padding: 12px 24px;
     border: none;
@@ -67,11 +67,13 @@
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
+    transition: all var(--transition-base);
 }
 
 .view-all-btn:hover {
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Expandable Training Details */

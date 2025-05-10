@@ -157,7 +157,7 @@
 }
 
 .back-button {
-  background-color: var(--button-color);
+  background-color: var(--accent-color-2);
   color: #fff;
   padding: 12px 30px;
   border: none;
@@ -165,11 +165,11 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all var(--transition-base);
 }
 
 .back-button:hover {
-  background-color: var(--accent-color);
+  transform: translateY(-5px);
 }
 
 /* Responsive Design */

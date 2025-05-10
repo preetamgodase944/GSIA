@@ -119,8 +119,8 @@ const TrainingDetailsPage = () => {
       </div>
 
       <div className="back-button-container">
-        <button className="back-button" onClick={() => {navigate('/'); scrollToTop()}}>
-          Back to Training
+        <button className="back-btn" onClick={() => {navigate('/'); scrollToTop()}}>
+          Back to Home
         </button>
       </div>
     </div>
