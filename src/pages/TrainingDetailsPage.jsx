@@ -45,9 +45,8 @@ const TrainingDetailsPage = () => {
       {/* Training Modules */}
       <div className="training-module-section">
         <h2>Explore Our Training Modules</h2>
-        <div className="module-grid">
-          <div className="training-module">
-            {/* <img src={classroomImage} alt="Classroom Training" className="module-image" /> */}
+        <div className="module-list">
+          <div className="module-item">
             <h3>PLC Training</h3>
             <ul>
               <li>Introduction to PLC Architecture & Components</li>
@@ -59,8 +58,7 @@ const TrainingDetailsPage = () => {
             </ul>
           </div>
 
-          <div className="training-module">
-            {/* <img src={handsOnImage} alt="Hands-On Training" className="module-image" /> */}
+          <div className="module-item">
             <h3>HMI and SCADA Training</h3>
             <ul>
               <li>Introduction to HMI & Various Industry Models</li>
@@ -76,9 +74,7 @@ const TrainingDetailsPage = () => {
             </ul>
           </div>
 
-          {/* Additional modules can be added similarly */}
-
-          <div className="training-module">
+          <div className="module-item">
             <h3>VFD and Servo Training</h3>
             <ul>
               <li>Introduction to VFD and Motor Control</li>
@@ -87,7 +83,7 @@ const TrainingDetailsPage = () => {
             </ul>
           </div>
 
-          <div className="training-module">
+          <div className="module-item">
             <h3>Industrial Communication Protocols</h3>
             <ul>
               <li>Fieldbus (Modbus RTU, PROFIBUS, CAN Bus)</li>
@@ -95,7 +91,7 @@ const TrainingDetailsPage = () => {
             </ul>
           </div>
 
-          <div className="training-module">
+          <div className="module-item">
             <h3>Industrial Automation Crash Course</h3>
             <ul>
               <li>Introduction to Industrial Automation</li>
@@ -107,14 +103,14 @@ const TrainingDetailsPage = () => {
             </ul>
           </div>
 
-          <div className="training-module">
+          <div className="module-item">
             <h3>PGDIA for Industry 4.0 Course</h3>
             <p>
               Comprehensive training program focusing on modern industrial automation systems and Industry 4.0 concepts.
             </p>
           </div>
 
-          <div className="training-module">
+          <div className="module-item">
             <h3>Internship Programme</h3>
             <ul>
               <li><strong>Duration:</strong> 4 to 12 weeks (Flexible schedules available)</li>
@@ -122,12 +118,13 @@ const TrainingDetailsPage = () => {
             </ul>
           </div>
 
-          <div className="training-module">
+          <div className="module-item">
             <h3>Academic Projects (Engineering/Diploma)</h3>
             <p>
               Guidance and support for academic projects related to industrial automation and control systems.
             </p>
           </div>
+
         </div>
       </div>
 
