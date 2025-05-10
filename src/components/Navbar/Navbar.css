@@ -1,23 +1,22 @@
-/* src/components/Navbar/Navbar.css */
-
-/* Solid, high-contrast background */
+/** Solid, high-contrast background **/
 .navbar {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.755); /* e.g. a vibrant teal or your brand color */
+  background-color: rgb(24, 24, 24);
+  /** e.g. a vibrant teal or your brand color **/
   color: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: none;
   z-index: 1000;
-  height: 70px;
+  height: 65px;
   transition: all 0.3s ease;
 }
 
-/* Slightly darker when scrolled */
+/** Slightly darker when scrolled **/
 .navbar-scrolled {
-  background-color: darken(var(--primary-color), 10%);
+  background-color: rgba(0, 0, 0, 0.9);
   height: 60px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
@@ -49,12 +48,13 @@
 }
 
 .navbar-item a,
-.navbar-item .active {
+.navbar-item .active,
+.nav-button {
   display: block;
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   padding: 10px 16px;
   border-radius: 6px;
   text-transform: uppercase;
@@ -63,20 +63,46 @@
   font-weight: 600;
 }
 
-/* Hover state */
-.navbar-item a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+/* Modern, subtle button styling */
+.nav-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/** Hover state **/
+.nav-button:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.nav-button:hover:after {
+  width: 80%;
+}
+
+/** Active link **/
+.nav-button.active {
   color: #ffffff;
 }
 
-/* Active link */
-.navbar-item .active {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff;
+.nav-button.active:after {
+  width: 80%;
+  background: #ffffff;
+  opacity: 1;
 }
 
-/* Mobile menu toggle */
+/** Mobile menu toggle **/
 .navbar-toggle {
   display: none;
   background: transparent;
@@ -90,16 +116,16 @@
   height: 24px;
 }
 
-/* Mobile styles */
+/** Mobile styles **/
 @media (max-width: 950px) {
   .navbar-links {
     position: fixed;
-    top: 70px;
+    top: 65px;
     right: -280px;
     flex-direction: column;
-    background: var(--primary-color);
+    background: rgba(0, 0, 0, 0.9);
     width: 280px;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 65px);
     padding: 20px 0;
     transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
@@ -118,6 +144,7 @@
     width: calc(100% - 40px);
   }
 
+  .nav-button,
   .navbar-item a,
   .navbar-item .active {
     padding: 12px 16px;

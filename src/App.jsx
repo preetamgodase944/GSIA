@@ -8,6 +8,7 @@ import Training from "./components/Training/Training";
 import "./App.css";
 import TrainingDetailsPage from "./pages/TrainingDetailsPage";
 import TradingDetailsPage from "./pages/TradingDetailsPage";
+import FloatingButton from "./components/FloatingButton";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/trading/details" element={<TradingDetailsPage />} />
         </Routes>
         <Footer />
+        <FloatingButton />
       </div>
     </Router>
   );

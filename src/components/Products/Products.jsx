@@ -68,11 +68,15 @@ export default function Products() {
   const handleLearnMore = (productId, e) => {
     e.preventDefault();
     setActiveModal(productId);
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
   };
 
   // Close modal handler
   const closeModal = () => {
     setActiveModal(null);
+    // Re-enable body scrolling when modal is closed
+    document.body.style.overflow = 'auto';
   };
 
   return (
@@ -81,22 +85,33 @@ export default function Products() {
         <div className="section-title">
           <h2>Our Products</h2>
           <p className="section-description">
-            GSIA is one of the leading global manufacturers. We independently develop, manufacture, and sell HMI, PLC, IIoT V-BOX, SERVO, and INVERTER solutions.
+            GSIA is one of the leading global manufacturers of Electrical Control Panels. We independently develop, manufacture of Electrical Control Panels, and sell HMI, PLC, IoT V-BOX, SERVO, and INVERTER for automation projects.
           </p>
         </div>
-        
+
         <div className="products-grid">
           {Object.keys(productDetails).map((productId) => {
             const product = productDetails[productId];
             return (
               <div className="product-card" key={productId}>
                 <div className="product-image-container">
-                  <img src={product.image} alt={`${product.title} product`} className="product-image"/>
+                  <img
+                    src={product.image}
+                    alt={`${product.title} product`}
+                    className="product-image"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="product-content">
                   <h3 className="product-title">{product.title}</h3>
                   <p className="product-description">{product.shortDesc}</p>
-                  <a href="#" className="product-link" onClick={(e) => handleLearnMore(productId, e)}>Learn More</a>
+                  <button
+                    className="product-link"
+                    onClick={(e) => handleLearnMore(productId, e)}
+                    aria-label={`Learn more about ${product.title}`}
+                  >
+                    Learn More
+                  </button>
                 </div>
               </div>
             );
@@ -106,18 +121,31 @@ export default function Products() {
 
       {/* Product Detail Modal */}
       {activeModal && (
-        <div className="product-modal-overlay" onClick={closeModal}>
+        <div
+          className="product-modal-overlay"
+          onClick={closeModal}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={`modal-title-${activeModal}`}
+        >
           <div className="product-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={closeModal}>×</button>
+            <button
+              className="modal-close-btn"
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              ×
+            </button>
             <div className="modal-image-container">
-              <img 
-                src={productDetails[activeModal].image} 
-                alt={productDetails[activeModal].title} 
-                className="modal-image" 
+              <img
+                src={productDetails[activeModal].image}
+                alt={productDetails[activeModal].title}
+                className="modal-image"
+                loading="lazy"
               />
             </div>
             <div className="modal-content">
-              <h2>{productDetails[activeModal].title}</h2>
+              <h2 id={`modal-title-${activeModal}`}>{productDetails[activeModal].title}</h2>
               <p className="modal-description">{productDetails[activeModal].fullDesc}</p>
               <h3>Key Features</h3>
               <ul className="feature-list">
@@ -126,9 +154,9 @@ export default function Products() {
                 ))}
               </ul>
               <div className="modal-footer">
-                <button className="contact-btn">
-                  <a href="#contact-us">Contact Sales</a>
-                </button>
+                <a href="#contact-us" className="contact-btn" onClick={closeModal}>
+                  Contact Sales
+                </a>
               </div>
             </div>
           </div>

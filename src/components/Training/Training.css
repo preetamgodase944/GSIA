@@ -15,7 +15,7 @@
 .training h2 {
     font-size: 36px;
     font-weight: bold;
-    color: var(--button-color);
+    color: var(--text-color);
     margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -45,8 +45,6 @@
 .training-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(to bottom, #fff, rgba(69, 150, 151, 0.245));
-    /* color: #ffffff; */
 }
 
 .view-all-training {
@@ -55,7 +53,7 @@
 }
 
 .view-all-btn {
-    background-color: var(--button-color);
+    background: #212ea0e1;
     color: #fff;
     padding: 12px 24px;
     border: none;
@@ -67,11 +65,13 @@
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
+    transition: all var(--transition-base);
 }
 
 .view-all-btn:hover {
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Expandable Training Details */
