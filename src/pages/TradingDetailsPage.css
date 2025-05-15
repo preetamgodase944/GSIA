@@ -27,24 +27,16 @@
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.trading-details-header {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  max-width: 700px;
   text-align: center;
-  width: 100%;
   padding: 40px 20px;
 }
 
-.trading-details-header h1 {
+.hero-overlay h1 {
   font-size: 42px;
   font-weight: bold;
   color: #fff;
@@ -54,7 +46,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.trading-details-header p {
+.hero-overlay p {
   font-size: 18px;
   line-height: 1.6;
   max-width: 800px;
@@ -186,7 +178,7 @@
     height: 350px;
   }
 
-  .trading-details-header h1 {
+  .hero-overlay h1 {
     font-size: 36px;
   }
 }
@@ -196,11 +188,11 @@
     height: 300px;
   }
 
-  .trading-details-header h1 {
+  .hero-overlay h1 {
     font-size: 28px;
   }
 
-  .trading-details-header p {
+  .hero-overlay p {
     font-size: 16px;
   }
 
@@ -226,12 +218,12 @@
     height: 250px;
   }
 
-  .trading-details-header h1 {
+  .hero-overlay h1 {
     font-size: 24px;
   }
 }
 
-.trading-details-header {
+.hero-overlay {
   text-align: center;
   width: 100%;
   padding: 40px 20px;
@@ -240,7 +232,7 @@
   margin: 0 auto;
 }
 
-.trading-details-header h1 {
+.hero-overlay h1 {
   font-size: 42px;
   font-weight: bold;
   color: #fff;
@@ -250,7 +242,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.trading-details-header p {
+.hero-overlay p {
   font-size: 18px;
   line-height: 1.6;
   max-width: 800px;
@@ -261,33 +253,33 @@
 
 /* Make sure these responsive styles are maintained */
 @media (max-width: 992px) {
-  .trading-details-header h1 {
+  .hero-overlay h1 {
     font-size: 36px;
   }
 }
 
 @media (max-width: 768px) {
-  .trading-details-header {
+  .hero-overlay {
     padding: 30px 20px;
     /* Slightly less padding on smaller screens */
   }
 
-  .trading-details-header h1 {
+  .hero-overlay h1 {
     font-size: 28px;
   }
 
-  .trading-details-header p {
+  .hero-overlay p {
     font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .trading-details-header {
+  .hero-overlay {
     padding: 25px 15px;
     /* Even less padding on very small screens */
   }
 
-  .trading-details-header h1 {
+  .hero-overlay h1 {
     font-size: 24px;
     margin-bottom: 15px;
   }
