@@ -51,6 +51,11 @@ export default function Navbar() {
     return location.pathname === to;
   };
 
+  const handleScrollToTop = () => {
+    if (showMobileMenu) setShowMobileMenu(false);
+    scrollToTop();
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
@@ -89,7 +94,7 @@ export default function Navbar() {
           <li className="navbar-item">
             <Link
               to="/training/details"
-              onClick={scrollToTop}
+              onClick={handleScrollToTop}
               className={`nav-button ${isLinkActive('/training/details') ? 'active' : ''}`}
             >
               Training
@@ -98,7 +103,7 @@ export default function Navbar() {
           <li className="navbar-item">
             <Link
               to="/trading/details"
-              onClick={scrollToTop}
+              onClick={handleScrollToTop}
               className={`nav-button ${isLinkActive('/trading/details') ? 'active' : ''}`}
             >
               Trading
