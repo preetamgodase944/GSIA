@@ -105,10 +105,8 @@ const TradingDetailsPage = () => {
       <div className="hero-section">
         <img src={heroImage} alt="Industrial Automation" className="hero-image" />
         <div className="hero-overlay">
-          <div className="trading-details-header">
             <h1>{data.header.title}</h1>
             <p>{data.header.description}</p>
-          </div>
         </div>
       </div>
 
